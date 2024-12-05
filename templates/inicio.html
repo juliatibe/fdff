@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dog Dodoi</title>
+    <link rel="stylesheet" href="static/css/inicio.css">
+</head>
+<body>
+  
+    <header>
+        <div class="cabecalho">
+            <h1>DOG DODOI</h1>
+            <a href="{{url_for('agendamento')}}">INICIO</a>
+        </div>
+    </header>
+
+
+    <section class="comeco">
+        <h2>DOG DODOI</h2>
+        <p><strong>SAÚDE E TRANQUILIDADE, SEMPRE!</strong></p>
+        <img src="static/img/cachorrinho.jpg" alt="Dois cachorros brincando">
+    </section>
+
+    <section class="agendamento">
+        <h3>AGENDAMENTO</h3>
+        <p>FAÇA SEU AGENDAMENTO PARA CONSULTA!</p>
+        <div class="form-agendamento">
+            <a href="{{ url_for('agendamento') }}" class="botaoum">AGENDAR</a>
+        </div>
+    </section>
+    
+    <section class="login">
+        <h3>LOGIN</h3>
+        <p>LOGUE SUA CONTA PARA ORGANIZAR SEUS AGENDAMENTOS!</p>
+        <div class="logindois">
+            <form action="{{url_for('veterinario')}}" method="POST">
+                <label>EMAIL:</label>
+                <input type="email" name="email" placeholder="Digite seu email" required>
+                <label>SENHA:</label>
+                <input type="password" name="senha" placeholder="Digite sua senha" required>
+                <button type="submit" class="botaodois">ENTRAR</button>
+            </form>
+            <p>AINDA NÃO TEM CONTA? <a href="{{url_for('cadastro')}}">CADASTRE-SE</a></p>
+        </div>
+    </section>
+    
+
+    <section class="parte">
+        <img src="static/img/foto_cachorro_site_jj-removebg-preview.png" alt="Cachorro feliz">
+        <div>
+            <h4>QUEM SOMOS?</h4>
+            <p>SOMOS UMA CLÍNICA VETERINÁRIA QUE PREZA A SAÚDE E BEM-ESTAR DO SEU ANIMAL! CONTAMOS COM UMA EQUIPE ESPECIALIZADA QUE AMA O QUE FAZ!</p>
+        </div>
+    </section>
+
+    <footer>
+        <div class="rodape">
+            <div>
+                <p><strong>CONTATO</strong><br>18 99645-1901<br>dogdodoi@gmail.com</p>
+            </div>
+            <div>
+                <p><strong>ENDEREÇO</strong><br>AV. BRASILIA 1001 - ARAÇATUBA</p>
+            </div>
+            <div>
+                <p><strong>DOG DODOI</strong><br>ESPERAMOS POR VOCÊ E SEU AMIGO</p>
+            </div>
+        </div>
+        <p class="frase">Copyright© 2024 dogdodoi - Todos os direitos reservados</p>
+    </footer>
+</body>
+</html>

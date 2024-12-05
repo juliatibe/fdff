@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="PT-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dog Dodoi</title>
+    <link rel="stylesheet" href="static/css/veterinario.css">
+</head>
+<body>
+
+    <header>
+        <div class="cabecalho">
+            <h1>DOG DODOI</h1>
+            <a href="#">veterinário</a>
+        </div>
+    </header>
+    <main>
+        </form>
+        <div class="tabela">
+            <h2>CONSULTAS</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Nome</th>
+                        <th>Email</th>
+                        <th>Telefone</th>
+                        <th>Horário da Consulta</th>
+                        <th>Observações</th>
+                        <th>ações</th>
+                    </tr>
+                </thead>
+
+                <tbody>
+                    {% for agendamento in agendamentos %}
+                        <tr>
+                            <td>{{ agendamento[1] }}</td>
+                            <td>{{ agendamento[2] }}</td>
+                            <td>{{ agendamento[3] }}</td>
+                            <td>{{ agendamento[4] }}</td>
+                            <td>{{ agendamento[5] }}</td>
+                            <td>
+                                <a href="{{ url_for('editar', id=agendamento[0]) }}">Editar</a>
+                            </td>
+                        </tr>
+                    {% endfor %}
+                </tbody>
+            </table>
+        </div>
+    </main>
+
+
+    <footer>
+        <div class="rodape">
+            <div>
+                <p><strong>CONTATO</strong><br>
+                18 99645-1901<br>
+                dogdodoi@gmail.com</p>
+            </div>
+            <div>
+                <p><strong>ENDEREÇO</strong><br>
+                AV. BRASILIA 1001 - ARAÇATUBA</p>
+            </div>
+            <div>
+                <p><strong>DOG DODOI</strong><br>
+                ESPERAMOS POR VOCÊ E SEU AMIGO</p>
+            </div>
+        </div>
+        <p class="frase">Copyright© 2024 dogdodoi - Todos os direitos reservados</p>
+    </footer>
+</body>
+</html>

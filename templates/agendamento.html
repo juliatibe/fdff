@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dog Dodoi</title>
+    <link rel="stylesheet" href="static/css/agendamento.css">
+</head>
+<body>
+ 
+    <header>
+        <div class="cabecalho">
+            <h1>DOG DODOI</h1>
+            <a href="#">agendamento</a>
+        </div>
+    </header>
+
+ 
+    <main>
+        <div class="agendamento">
+            <h2>AGENDAMENTO</h2>
+            <form action="{{ url_for('criar_agendamento') }}" method="post">
+                <label for="nome">NOME:</label>
+                <input type="text" id="nome" name="nome" required>
+
+                <label for="email">EMAIL:</label>
+                <input type="email" id="email" name="email" required>
+
+                <label for="telefone">TELEFONE:</label>
+                <input type="tel" id="telefone" name="telefone" required>
+
+                <label for="horario">HORÁRIO DA CONSULTA:</label>
+                <input type="text" id="horario" name="horario" required>
+
+                <label for="observacoes">OBSERVAÇÕES:</label>
+                <textarea id="observacoes" name="observacoes"></textarea>
+
+                <button type="submit">ENVIAR</button>
+            </form>
+        </div>
+    </main>
+    <footer>
+        <div class="rodape">
+            <div>
+                <p><strong>CONTATO</strong><br>
+                18 99645-1901<br>
+                dogdodoi@gmail.com</p>
+            </div>
+            <div>
+                <p><strong>ENDEREÇO</strong><br>
+                AV. BRASILIA 1001 - ARAÇATUBA</p>
+            </div>
+            <div>
+                <p><strong>DOG DODOI</strong><br>
+                ESPERAMOS POR VOCÊ E SEU AMIGO</p>
+            </div>
+        </div>
+        <p class="frase">Copyright© 2024 dogdodoi - Todos os direitos reservados</p>
+    </footer>
+
+</body>
+</html>
